@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Recipe Search Engine</title>
+
+    <form action="{{ url_for('results') }}" method="POST">
+        <p>
+            {{ form.query.label }} {{ form.query(size=30) }} {{ form.exclude(size=30) }} {{form.submit()}}
+        </p>
+    </form>
+
+<!--    <form action="{{ url_for('results') }}" method="POST">-->
+<!--        <p>Search</p>-->
+<!--            <input name="query">-->
+<!--            <input type="submit">-->
+
+<!--    </form>-->
+
+    {% block head %} {% endblock %}
+</head>
+<body>
+    {% block body %} {% endblock %}
+</body>
+</html>

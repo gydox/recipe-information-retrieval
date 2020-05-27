@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+<p>
+    Searching result for {{ search_query }}
+    {% if exclude_query %}
+        while excluding {{ exclude_query }}
+    {% endif %}
+</p>
+{% endblock %}
+
+{% block body %}
+
+<ul>
+
+    {% for _id, recipe in recipeData.items() %}
+    <form id="ingredient-form" action="{{ url_for('results') }}" method="POST">
+         <input type="hidden" name="exclude" value="{{ exclude_query }}">
+    </form>
+    <form id="recipe-form-{{ _id }}" action="{{ url_for( 'recipe',_id = _id) }}" method="POST"></form>
+
+    <div class="result-list">
+            {{_id}}
+            <button name="recipe_id" type="submit" value={{ _id }} form="recipe-form-{{ _id }}">
+                 <h4>{{ recipe.dishName }}</h4>
+            </button>
+
+
+            <div>
+                {% for ingredient in recipe.ingredients %}
+                <button name="query" type="submit" value="{{ ingredient }}" form="ingredient-form">
+                    {{ingredient}}
+                </button>
+                {% endfor %}
+            </div>
+
+        <br>
+    </div>
+
+    {% endfor %}
+</ul>
+{% endblock %}

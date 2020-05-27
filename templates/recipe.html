@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!--<p>Searching result for {{ query }}</p>-->
+{% endblock %}
+
+{% block body %}
+<h1>{{ recipe['dishName'] }}</h1>
+
+<h2>Ingredients</h2>
+<ul>
+    {% for ingredient in recipe['ingredients'] %}
+    <li>{{ingredient}}</li>
+    {% endfor %}
+</ul>
+
+<h2>Step-by-step guide</h2>
+<ol>
+    {% for step in recipe['steps'] %}
+    <li>{{step}}</li>
+    {% endfor %}
+</ol>
+{% endblock %}

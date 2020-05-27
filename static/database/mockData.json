@@ -1,0 +1,36 @@
+{
+  "recipeData": [
+    {
+        "_id": 1,
+        "dishName": "Salmon Sashimi",
+        "ingredients": ["Mama Norway Salmon"],
+        "steps": [
+            "Debone the salmon",
+            "Slice salmon into 6cm by 2cm size",
+            "Place nicely on plate"
+        ]
+    },
+    {
+        "_id": 2,
+        "dishName": "Shiro sushi",
+        "ingredients": ["White Tuna", "Rice", "Seaweed"],
+        "steps": [
+            "Slice white tuna into 6cm by 2cm size",
+            "Use hand to make a small ball of rice",
+            "Place white tuna on rice",
+            "Use a strip of seaweed to tie the rice together with the tuna"
+        ]
+    },
+    {
+        "_id": 3,
+        "dishName": "Tuna sushi",
+        "ingredients": ["Red Tuna", "Rice", "Seaweed"],
+        "steps": [
+            "Slice red tuna into 6cm by 2cm size",
+            "Use hand to make a small ball of rice",
+            "Place white tuna on rice",
+            "Use a strip of seaweed to tie the rice together with the tuna"
+        ]
+    }
+  ]
+}
