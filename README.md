@@ -4,7 +4,7 @@ Search engine on recipe data to test information retrieval algorithm. Food recip
 ## Data Source
 Data is scrapped from allrecipe.com using Beautiful Soup 4.
 
-## Information Retriecal Algorithm
+## Information Retrieval Algorithm
 ### Term Frequency - Inverse Term Frequency (TF-IDF)
 We will be using TF-IDF algorithm as we will have a large dataset of recipes. TF-IDF will be a good algorithm to use in this case to calculate the importance of a keyword by comparing its frequency in the page to the same keyword frequency in a large set of documents.
 
@@ -15,7 +15,7 @@ Boolean model will be built into the UI to solve a specific problem when users w
 Relevance feedback model will be implemented into the search algorithm to increase search relevance. This is so that we can tackle the issue where the recipe document does not include a term that it is supposed to be included. For example, the recipe “Eggs Benedict” is a breakfast meal but will not appear if the user queries for “breakfast”. Therefore a relevance feedback model such as click through can solve this issue after the system is naturally used over a period of time.
 
 ## Local Development
-### Prerequisits
+### Prerequisite
 - Python 3.7
 - pip3
 
