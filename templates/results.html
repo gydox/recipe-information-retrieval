@@ -7,7 +7,9 @@
     {% if exclude_query %}
         while excluding {{ exclude_query }}
     {% endif %}
+
 </p>
+<p>Processed query: {{ processed_query }}</p>
 {% endblock %}
 
 {% block body %}
